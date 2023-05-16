@@ -1,0 +1,27 @@
+Go to MongoDb terminal
+type --> mongo
+type --> show dbs
+type --> use pacman
+type below command as one shot-->
+var collections = db.getCollectionNames();
+for(var i = 0; i< collections.length; i++){    
+   print('Collection: ' + collections[i]); // print the name of each collection
+   db.getCollection(collections[i]).find().forEach(printjson); //and then print the json of each of its elements
+}
+------------------------------------
+Example output
+{
+        "_id" : ObjectId("64637f89c34ff400113ecd22"),
+        "name" : "koko",
+        "cloud" : "unknown",
+        "zone" : "unknown",
+        "host" : "pacman-c68d9f87c-nkwpp",
+        "score" : 360,
+        "level" : 1,
+        "date" : "Tue May 16 2023 13:05:13 GMT+0000 (UTC)",
+        "referer" : "http://pacman-pacman.apps.hub27.newlab.local/",
+        "user_agent" : "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36",
+        "hostname" : "pacman-pacman.apps.hub27.newlab.local",
+        "ip_addr" : "::ffff:10.128.0.1"
+}
+---------------------------------------
